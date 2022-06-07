@@ -1,0 +1,12 @@
+
+// Moves the pagila.sql file into template folder for PostgreSQL.
+if
+   not
+      io.file.exists:/etc/pgsql/templates/pagila.sql
+   .lambda
+
+      // File doesn't exists, hence moving it.
+      io.file.move:/modules/pgsql-pagila/magic.startup/pagila.sql
+         .:/etc/pgsql/templates/
+      log.info:Pagila database SQL script moved into etc folder
+         filename:/etc/pgsql/templates/pagila.sql

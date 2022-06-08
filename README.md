@@ -8,4 +8,4 @@ PgSQL connection, which we cannot determine with certainty that you actually hav
 ## Installation
 
 Install this module in your Magic backend, open up SQL Studio, load the pagila script,
-and execute it towards a valid database PostgreSQL connection.
+and execute it towards a valid PostgreSQL connection.
